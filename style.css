@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+}
+
+#logoYoutube{
+    width: 100px;
+    margin-right: 600px;
+}
+.busqueda{
+    margin-top: 20px;
+    justify-content: center;
+}
+.busqueda #search{
+    width: 400px;
+    height: 20px;
+}
+.busqueda img{
+    width: 20px;
+}
