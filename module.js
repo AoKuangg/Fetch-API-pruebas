@@ -26,17 +26,17 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
         cContainer.appendChild(div);
     }
     rVContainer.innerHTML = '';
-    videos.slice(1,limit).forEach(videoItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
+    videos.slice(1,limit).forEach(vItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
         const div = document.createElement('div');
         div.setAttribute('class', 'recommended-video col-12 d-flex justify-content-start align-items-center text-light my-2')
 
         div.innerHTML = `
-            <img src="${videoItem.video.thumbnails[0].url}"
+            <img src="${vItem.video.thumbnails[0].url}"
                 alt="">
             <div class="recommended-detail-video col d-flex flex-column">
-                <p class="fw-bold fs-4 mt-1 mx-3">${videoItem.video.title}</p>
-                <p class="fs-5 mt-1 mx-3">${videoItem.video.author.title}</p>
-                <p class="mt-1 mx-3">${videoItem.video.publishedTimeText}</p>
+                <p class="fw-bold fs-4 mt-1 mx-3">${vItem.video.title}</p>
+                <p class="fs-5 mt-1 mx-3">${vItem.video.author.title}</p>
+                <p class="mt-1 mx-3">${vItem.video.publishedTimeText}</p>
             </div>
         `;
 
