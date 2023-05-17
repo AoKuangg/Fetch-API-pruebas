@@ -71,4 +71,36 @@
          text-align: left;
      }
  }
- 
+ @media (max-width: 500px){
+    #btnsubmit{
+        width: 3.5rem;
+    }
+    input[type="text"]{
+        width: 10rem;
+    }
+    .recommended-video{
+        flex-direction: column;
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.645);
+    }
+    .recommended-video .recommended-detail-video{
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .recommended-video img{
+        width: 250px;
+    }
+    .video-container iframe{
+        height: 450px;
+    }
+}
+@media (max-width: 350px){
+    #btnsubmit{
+        width: 3rem;
+    }
+    input[type="text"]{
+        width: 7rem;
+    }
+}
