@@ -26,7 +26,7 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
         cContainer.appendChild(div);
     }
     rVContainer.innerHTML = '';
-    videos.slice(1,limit).forEach(vItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
+    videos.slice(1,limit).forEach(vItem => { //videos.slice(0, limit) devuelve los primeros limit elementos de videos
         const div = document.createElement('div');
         div.setAttribute('class', 'recommended-video col-12 d-flex justify-content-start align-items-center text-light my-2')
 
