@@ -41,9 +41,8 @@ To get started with this project, follow these steps:
 
    - This project was developed as a demonstration of Fetch API usage and web development skills.
 
-## Reources
-    
+## Resources
+
    In the following image you can see the web page that was designed in this project.
 
-![Screenshot FOR README](C:\Users\USUARIO\OneDrive\Escritorio\Fetch-API-pruebas\resourses\Screenshot FOR README.jpg)
-
+![](https://raw.githubusercontent.com/AoKuangg/Fetch-API-pruebas/master/resourses/Screenshot%20FOR%20README.jpg)
