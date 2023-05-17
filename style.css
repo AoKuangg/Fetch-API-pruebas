@@ -1,24 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@1,100&display=swap');
 
-header {
+  html{
+    font: 63%;
+  }
+
+  #btnsubmit{
+    width: 4.5rem;
+    height: 2.485rem;
+    border: 1px solid transparent;
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+  #btnsubmit:active{
+    background-color: rgba(0, 0, 0, 0.616);
+    color: whitesmoke;
+  }
+
+  input[type="text"]{
+    width: 20rem;
+    height: 2.485rem;
+    border: 1px solid transparent;
+    outline: none;
+    padding-left: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .logo-container{
+    position: relative;
     display: flex;
-}
-
-#logoYoutube{
-    width: 100px;
-    margin-right: 600px;
-}
-.busqueda{
-    margin-top: 20px;
     justify-content: center;
-}
-.busqueda #search{
-    width: 400px;
-    height: 20px;
-}
-.busqueda img{
-    width: 20px;
+    align-items: center;
 }
