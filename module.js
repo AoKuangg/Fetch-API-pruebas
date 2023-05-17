@@ -6,7 +6,7 @@ let videoIframe = document.querySelector('iframe');
 let description = document.querySelector('#description');
 const commentsContainer = document.querySelector('#comments-container');
 const recommendedVideosContainer = document.querySelector('.recommended-videos-container');
-const limit= 5
+const limit= 6
 export function moduloVideo(firstVideo, videos, commentsVideo) {
     videoTitle.innerHTML = firstVideo.video.title;
     videoAuthor.innerHTML = firstVideo.video.author.title;
@@ -20,13 +20,13 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
         const div = document.createElement('div');
         div.setAttribute('class', 'comment-detail col-12');
         div.innerHTML = `
-                <h6 class="text-primary fw-bold" id="userOne">${commentsVideo[i].author.title}</h6>
+                <h6 class="text-light fw-bold" id="userOne">${commentsVideo[i].author.title}</h6>
                 <p class="text-light" id="desUserOne">${commentsVideo[i].content}</p>
             `;
         commentsContainer.appendChild(div);
     }
     recommendedVideosContainer.innerHTML = '';
-    videos.slice(0,limit).forEach(videoItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
+    videos.slice(1,limit).forEach(videoItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
         const div = document.createElement('div');
         div.setAttribute('class', 'recommended-video col-12 d-flex justify-content-start align-items-center text-light my-2')
 
