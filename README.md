@@ -21,7 +21,7 @@ This project demonstrates the usage of the Fetch API to retrieve data from the Y
 
 To get started with this project, follow these steps:
 
-1. Clone the repository: git clone https://github.com/AoKuangg/Fetch-API-pruebas.git
+1. Clone the repository: git clone https://github.com/AoKuangg/Iutuve-real-no-fake.git
 
 2. Open the index.html file in your web browser.
 
