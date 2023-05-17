@@ -14,3 +14,12 @@ const options = {
  		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 }
 };
+const getVideos = async (data) => {
+    const videos = await (await fetch(`https://youtube138.p.rapidapi.com/search/?q=${data}&hl=en&gl=US`,options)).json();
+    const videosRecommended = videos.contents;
+    const firstVideo = videos.contents[0];
+    const comments = await (await fetch(`https://youtube138.p.rapidapi.com/video/comments/?id=${firstVideo.video.videoId}&hl=en&gl=US`,options)).json();
+    const commentsVideo = comments.comments;
+    moduloVideo(firstVideo, videosRecommended,commentsVideo)
+    return firstVideo;
+};
