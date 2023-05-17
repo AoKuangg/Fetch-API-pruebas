@@ -6,7 +6,7 @@ let videoIframe = document.querySelector('iframe');
 let description = document.querySelector('#description');
 const commentsContainer = document.querySelector('#comments-container');
 const recommendedVideosContainer = document.querySelector('.recommended-videos-container');
-const limit= 6
+const limit= 5
 export function moduloVideo(firstVideo, videos, commentsVideo) {
     videoTitle.innerHTML = firstVideo.video.title;
     videoAuthor.innerHTML = firstVideo.video.author.title;
@@ -42,4 +42,5 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
 
         recommendedVideosContainer.appendChild(div);
     });
+    recommendedVideosContainer.classList.add('recommended-videos-container');
 };
