@@ -25,4 +25,21 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
             `;
         commentsContainer.appendChild(div);
     }
+    recommendedVideosContainer.innerHTML = '';
+    videos.forEach(videoItem => {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'recommended-video col-12 d-flex justify-content-start align-items-center text-light my-2')
+
+        div.innerHTML = `
+            <img src="${videoItem.video.thumbnails[0].url}"
+                alt="">
+            <div class="recommended-detail-video col d-flex flex-column">
+                <p class="fw-bold fs-4 mt-1 mx-3">${videoItem.video.title}</p>
+                <p class="fs-5 mt-1 mx-3">${videoItem.video.author.title}</p>
+                <p class="mt-1 mx-3">${videoItem.video.publishedTimeText}</p>
+            </div>
+        `;
+
+        recommendedVideosContainer.appendChild(div);
+    });
 };
