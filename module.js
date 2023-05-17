@@ -1,21 +1,21 @@
-let videoTitle = document.querySelector('#video-title');
-let videoAuthor = document.querySelector('#videoAuthor');
-let channelLogo = document.querySelector('#channel-logo');
+let vTitle = document.querySelector('#video-title');
+let vAuthor = document.querySelector('#videoAuthor');
+let cLogo = document.querySelector('#channel-logo');
 let views = document.querySelector('#views');
-let videoIframe = document.querySelector('iframe');
+let vIframe = document.querySelector('iframe');
 let description = document.querySelector('#description');
-const commentsContainer = document.querySelector('#comments-container');
-const recommendedVideosContainer = document.querySelector('.recommended-videos-container');
+const cContainer = document.querySelector('#comments-container');
+const rVContainer = document.querySelector('.recommended-videos-container');
 const limit= 5
 export function moduloVideo(firstVideo, videos, commentsVideo) {
-    videoTitle.innerHTML = firstVideo.video.title;
-    videoAuthor.innerHTML = firstVideo.video.author.title;
-    channelLogo.src = firstVideo.video.author.avatar[0].url;
+    vTitle.innerHTML = firstVideo.video.title;
+    vAuthor.innerHTML = firstVideo.video.author.title;
+    cLogo.src = firstVideo.video.author.avatar[0].url;
     views.innerHTML = Intl.NumberFormat().format(firstVideo.video.stats.views) + " views";
-    videoIframe.src = `https://www.youtube.com/embed/${firstVideo.video.videoId}`
-    description.innerHTML = firstVideo.video.descriptionSnippet;
+    vIframe.src = `https://www.youtube.com/embed/${firstVideo.video.videoId}`
+    description.innerHTML = firstVideo.video.description;
 
-    commentsContainer.innerHTML = '';
+    cContainer.innerHTML = '';
     for (let i = 0; i < 3; i++) {
         const div = document.createElement('div');
         div.setAttribute('class', 'comment-detail col-12');
@@ -23,9 +23,9 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
                 <h6 class="text-light fw-bold" id="userOne">${commentsVideo[i].author.title}</h6>
                 <p class="text-light" id="desUserOne">${commentsVideo[i].content}</p>
             `;
-        commentsContainer.appendChild(div);
+        cContainer.appendChild(div);
     }
-    recommendedVideosContainer.innerHTML = '';
+    rVContainer.innerHTML = '';
     videos.slice(1,limit).forEach(videoItem => { //videos.slice(0, limit) devuelve una nueva matriz con los primeros limit elementos de videos
         const div = document.createElement('div');
         div.setAttribute('class', 'recommended-video col-12 d-flex justify-content-start align-items-center text-light my-2')
@@ -40,7 +40,7 @@ export function moduloVideo(firstVideo, videos, commentsVideo) {
             </div>
         `;
 
-        recommendedVideosContainer.appendChild(div);
+        rVContainer.appendChild(div);
     });
-    recommendedVideosContainer.classList.add('recommended-videos-container');
+    rVContainer.classList.add('recommended-videos-container');
 };
